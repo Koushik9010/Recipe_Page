@@ -30,7 +30,8 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 200vh;
+   min-height: 100vh;
+   /* height: 200vh; */
    padding: 20px;
 }
 
@@ -87,7 +88,7 @@ body {
 .ingredients-list, .instruction-list {
     margin-bottom: 20px;
     list-style-type: disc;
-    margin-left: 20px;
+    margin: 30px;
     font-family: var(--font2);
     font-weight: 200;
 }
@@ -138,4 +139,60 @@ h2 {
 
 .nutrition-table td:nth-child(2) {
     color: var(--brown-800);
+}
+
+/* responsive styling */
+@media(max-width: 768px){
+    body {
+        background-color: var(--white);
+        /* box-shadow: none; */
+    }
+
+    .container{
+        padding: 15px;
+    }
+
+    .recipe-title{
+        font-size: 2em;
+    }
+
+    .recipe-description, .nutrition-description{
+        font-size: 1.3em;
+    }
+
+    .preparation-time, .ingredients-list, .instruction-list, .nutrition-table{
+        margin: 10px;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    .recipe-image{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width: 480px){
+    .recipe-title {
+        font-size: 1.3em;
+    }
+
+    .recipe-description, .nutrition-description, .preparation-time h3 {
+        font-size: 0.85em;
+    }
+
+    .preparation-time, .ingredients-list, .instruction-list, .nutrition-table {
+        margin: 5px;
+    }
+
+    .recipe-card, .preparation-time, .ingredients-list, .instruction-list, .nutrition-table {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+        padding: 5px;
+    }
 }
