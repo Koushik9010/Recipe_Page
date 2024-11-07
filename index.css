@@ -1,206 +1,197 @@
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+/* root variable */
 :root {
-  --font1: Young Serif, sans-serif;
-  --font2: Outfit, sans-serif;
-
   --white: hsl(0, 0%, 100%);
+
   --stone-100: hsl(30, 54%, 90%);
   --stone-150: hsl(30, 18%, 87%);
   --stone-600: hsl(30, 10%, 34%);
   --stone-900: hsl(24, 5%, 18%);
+
   --brown-800: hsl(14, 45%, 36%);
+
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
+
+  --font-1: "Young Serif", sans-serif;
+  --font-2: "Outfit", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
-  font-family: var(--font2), sans-serif;
-  background-color: var(--stone-100);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-2);
+  overflow-x: hidden;
+  background: var(--stone-100);
+  color: var(--stone-600);
 }
 
-.container {
-  max-width: 800px;
-  width: 100%;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
-  padding: 20px;
+.custom-section {
+  padding-top: 40px;
+}
+
+.separator {
+  background-color: var(--stone-100);
+  margin-top: 40px;
+}
+
+.info-title {
+  font-size: 25px;
+  font-family: var(--font-1);
+  color: var(--brown-800);
+  font-weight: 400px;
+  padding-bottom: 20px;
+}
+
+.ingredients-list,
+.instructions-list {
+  padding-left: 25px;
+}
+
+.ingredients-list,
+.instructions-list li {
+  padding-bottom: 10px;
+}
+
+.ingredients-list li::marker,
+.instructions-list li::marker {
+  color: var(--brown-800);
+  font-weight: bold;
+}
+
+.ingredients-list p,
+.instructions-list p {
+  color: var(--stone-600);
+  padding-left: 10px;
+}
+
+ingredients-list p span,
+.instructions-list p span {
+  font-weight: bold;
 }
 
 .recipe-card {
-  padding: 20px;
+  background-color: var(--white);
+  padding: 40px;
+  width: 800px;
+  max-width: 100%;
+  margin: 100px auto;
+  border-radius: 20px;
 }
 
 .recipe-image {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.recipe-title {
-  font-size: 2em;
-  color: var(--stone-900);
-  margin-bottom: 12px;
-}
-
-.recipe-description {
-  font-size: 1em;
-  font-weight: 400;
-  color: var(--stone-900);
-  margin-bottom: 10px;
-}
-
-.preparation-time {
-  background-color: var(--rose-50);
-  padding: 15px;
-  border-radius: 8px;
-  margin: 15px 0;
-}
-
-.preparation-time h3 {
-  color: var(--rose-800);
-  margin-bottom: 8px;
-}
-
-.preparation-time ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.ingredients-list,
-.instruction-list {
-  margin-bottom: 18px;
-  list-style-type: disc;
-  padding-left: 20px;
-  font-family: var(--font2);
-  font-weight: 200;
-}
-
-.ingredients-list li::marker,
-.instruction-list li::marker {
-  color: var(--brown-800);
-}
-
-.ingredients-list li,
-.instruction-list li {
-  margin-bottom: 5px;
-  margin-left: 10px;
-}
-
-h2 {
-  color: var(--brown-800);
-  padding: 12px;
-  font-family: var(--font1);
-}
-
-.separator {
-  color: var(--stone-150);
-  margin: 0 8px;
-}
-
-.nutrition-table {
+.recipe-image img {
   width: 100%;
-  border-collapse: collapse;
-  margin: 12px 0 20px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-.nutrition-table td {
-  padding: 12px;
-  text-align: center;
+.title {
+  padding: 20px 0;
+  color: var(--stone-900);
+}
+
+.title h1 {
+  font-family: var(--font-1);
+  font-size: 40px;
+}
+
+.title p {
+  padding-top: 20px;
+}
+
+.preparation-inner {
+  background-color: var(--rose-50);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.preparation-inner h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--rose-800);
+  padding-bottom: 20px;
+}
+
+.preparation-inner ul {
+  padding-left: 25px;
+  list-style: circle var(--brown-800);
+}
+
+.preparation-inner ul li {
+  padding-bottom: 10px;
+}
+
+.preparation-inner ul li::marker {
   color: var(--brown-800);
-  font-weight: 600;
 }
 
-.nutrition-table td:nth-child(2) {
+.preparation-inner ul p {
+  padding-left: 10px;
+}
+
+.preparation-inner ul p span {
+  color: var(--stone-600);
   font-weight: bold;
 }
 
-.nutrition-table tr {
+.nutrition p {
+  padding-bottom: 15px;
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition table tr td {
   border-bottom: 1px solid var(--stone-150);
+  padding: 15px;
 }
 
-.nutrition-table tr:last-child {
-  border-bottom: none;
+.nutrition table tr:last-child td {
+  border-bottom: 0;
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-  body {
-    background-color: var(--white);
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  .recipe-title {
-    font-size: 1.75em;
-  }
-
-  .recipe-description,
-  .nutrition-description {
-    font-size: 1.1em;
-  }
-
-  .preparation-time,
-  .ingredients-list,
-  .instruction-list,
-  .nutrition-table {
-    margin: 10px;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  .recipe-image {
-    max-width: 100%;
-    height: auto;
-  }
+.nutrition table tr td:nth-child(2) {
+  color: var(--brown-800);
+  font-weight: bold;
 }
 
-@media (max-width: 480px) {
-  .recipe-title {
-    font-size: 1.5em;
+/* responsive design for mobile view */
+@media screen and (max-width: 475px) {
+  .recipe-card {
+    padding: 0;
+    border-radius: 0;
+    margin: 0 auto;
   }
 
-  .recipe-description,
-  .nutrition-description,
-  .preparation-time h3 {
-    font-size: 0.85em;
+  .recipe-card .responsive-container {
+    padding: 30px;
   }
 
-  .preparation-time,
-  .ingredients-list,
-  .instruction-list,
-  .nutrition-table {
-    margin: 8px;
-  }
-
-  .recipe-card,
-  .preparation-time,
-  .ingredients-list,
-  .instruction-list,
-  .nutrition-table {
-    padding: 8px;
-  }
-
-  h2 {
-    font-size: 1em;
-    padding: 5px;
+  .recipe-card .recipe-image {
+    border-radius: 0;
+    height: 200px;
   }
 }
