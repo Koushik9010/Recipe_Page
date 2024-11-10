@@ -43,7 +43,7 @@ body {
 }
 
 .separator {
-  background-color: var(--stone-100);
+  background-color: var(--stone-150);
   margin-top: 40px;
 }
 
@@ -63,6 +63,7 @@ body {
 .ingredients-list,
 .instructions-list li {
   padding-bottom: 10px;
+  line-height: 1.8;
 }
 
 .ingredients-list li::marker,
